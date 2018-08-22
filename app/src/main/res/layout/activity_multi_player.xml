@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MultiPlayer"
+    android:backgroundTint="@color/colorPrimaryDark">
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turn : "
+        android:textSize="50dp"
+        android:id="@+id/text_turn"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/text_turn"
+        android:textSize="50dp"
+        android:id="@+id/turn"
+        android:text="X"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35dp"
+        android:id="@+id/win"
+        app:layout_constraintTop_toBottomOf="@id/text_turn"/>
+
+    <Button
+        android:layout_width="350px"
+        android:layout_height="350px"
+        android:id="@+id/zero"
+        app:layout_constraintBottom_toTopOf="@+id/four"
+        app:layout_constraintRight_toLeftOf="@id/four"
+        android:textSize="65dp"
+        android:onClick="change0"/>
+
+    <Button
+        android:layout_width="350px"
+        android:layout_height="350px"
+        app:layout_constraintLeft_toRightOf="@id/zero"
+        app:layout_constraintBottom_toTopOf="@id/four"
+        android:id="@+id/one"
+        android:textSize="65dp"
+        android:onClick="change1"/>
+
+    <Button
+        android:layout_width="350px"
+        android:layout_height="350px"
+        android:id="@+id/two"
+        app:layout_constraintLeft_toRightOf="@+id/one"
+        app:layout_constraintBottom_toTopOf="@id/four"
+        android:textSize="65dp"
+        android:onClick="change2"/>
+
+    <Button
+        android:layout_width="350px"
+        android:layout_height="350px"
+        android:id="@+id/three"
+        app:layout_constraintTop_toBottomOf="@+id/zero"
+        app:layout_constraintRight_toLeftOf="@+id/four"
+        android:textSize="65dp"
+        android:onClick="change3"/>
+
+    <Button
+        android:layout_width="350px"
+        android:layout_height="350px"
+        android:id="@+id/four"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="65dp"
+        android:onClick="change4"/>
+
+    <Button
+        android:layout_width="350px"
+        android:layout_height="350px"
+        android:id="@+id/five"
+        app:layout_constraintLeft_toRightOf="@+id/four"
+        app:layout_constraintTop_toBottomOf="@+id/two"
+        android:textSize="65dp"
+        android:onClick="change5"/>
+
+    <Button
+        android:layout_width="350px"
+        android:layout_height="350px"
+        android:id="@+id/six"
+        app:layout_constraintTop_toBottomOf="@id/three"
+        app:layout_constraintRight_toLeftOf="@+id/four"
+        android:textSize="65dp"
+        android:onClick="change6"/>
+
+    <Button
+        android:layout_width="350px"
+        android:layout_height="350px"
+        android:id="@+id/seven"
+        app:layout_constraintTop_toBottomOf="@+id/four"
+        app:layout_constraintLeft_toRightOf="@+id/six"
+        android:textSize="65dp"
+        android:onClick="change7"/>
+
+    <Button
+        android:layout_width="350px"
+        android:layout_height="350px"
+        android:id="@+id/eight"
+        app:layout_constraintTop_toBottomOf="@id/four"
+        app:layout_constraintLeft_toRightOf="@id/seven"
+        android:textSize="65dp"
+        android:onClick="change8"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reset"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Reset"
+        android:onClick="reset"/>
+</android.support.constraint.ConstraintLayout>
